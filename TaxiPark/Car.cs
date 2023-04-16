@@ -9,7 +9,12 @@
         public string Color { get; set; }
         public string GradYear { get; set; }
         public string Repair { get; set; }
-        public string Info { get; set; } 
+        public string Info
+        {
+            get { return CarBrand + " " + GradYear + " " + Color + " " + StateNumber; }
+            set { Info = value; }
+        }
+
 
         public Car(Int64 id, string carBrand, string stateNumber, string color, string gradYear, string repair)
         {
@@ -19,7 +24,7 @@
             Color = color;
             GradYear = gradYear;
             Repair = repair;
-            Info = CarBrand + " " + GradYear;
+            Info = carBrand + " " + gradYear;
         }
     }
 

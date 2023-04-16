@@ -28,12 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBoxDate = new TextBox();
-            textBoxTime = new TextBox();
             textBoxAdress = new TextBox();
             textBoxRoute = new TextBox();
-            textBoxDistance = new TextBox();
-            textBoxPrice = new TextBox();
             label3 = new Label();
             label2 = new Label();
             surnameLabel = new Label();
@@ -45,21 +41,13 @@
             buttonAdd = new Button();
             comboBoxCars = new ComboBox();
             comboBoxDrivers = new ComboBox();
+            numericUpDownPrice = new NumericUpDown();
+            dateTimePicker = new DateTimePicker();
+            dateTimePickerTime = new DateTimePicker();
+            numericUpDownDistance = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPrice).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownDistance).BeginInit();
             SuspendLayout();
-            // 
-            // textBoxDate
-            // 
-            textBoxDate.Location = new Point(159, 204);
-            textBoxDate.Name = "textBoxDate";
-            textBoxDate.Size = new Size(280, 27);
-            textBoxDate.TabIndex = 54;
-            // 
-            // textBoxTime
-            // 
-            textBoxTime.Location = new Point(159, 237);
-            textBoxTime.Name = "textBoxTime";
-            textBoxTime.Size = new Size(280, 27);
-            textBoxTime.TabIndex = 53;
             // 
             // textBoxAdress
             // 
@@ -74,20 +62,6 @@
             textBoxRoute.Name = "textBoxRoute";
             textBoxRoute.Size = new Size(280, 27);
             textBoxRoute.TabIndex = 50;
-            // 
-            // textBoxDistance
-            // 
-            textBoxDistance.Location = new Point(159, 138);
-            textBoxDistance.Name = "textBoxDistance";
-            textBoxDistance.Size = new Size(280, 27);
-            textBoxDistance.TabIndex = 51;
-            // 
-            // textBoxPrice
-            // 
-            textBoxPrice.Location = new Point(159, 171);
-            textBoxPrice.Name = "textBoxPrice";
-            textBoxPrice.Size = new Size(280, 27);
-            textBoxPrice.TabIndex = 52;
             // 
             // label3
             // 
@@ -155,7 +129,7 @@
             // 
             // buttonAdd
             // 
-            buttonAdd.Location = new Point(12, 270);
+            buttonAdd.Location = new Point(12, 272);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(427, 30);
             buttonAdd.TabIndex = 56;
@@ -179,20 +153,53 @@
             comboBoxDrivers.Size = new Size(280, 28);
             comboBoxDrivers.TabIndex = 58;
             // 
+            // numericUpDownPrice
+            // 
+            numericUpDownPrice.Location = new Point(159, 172);
+            numericUpDownPrice.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            numericUpDownPrice.Name = "numericUpDownPrice";
+            numericUpDownPrice.Size = new Size(280, 27);
+            numericUpDownPrice.TabIndex = 59;
+            numericUpDownPrice.Value = new decimal(new int[] { 30, 0, 0, 0 });
+            // 
+            // dateTimePicker
+            // 
+            dateTimePicker.Location = new Point(159, 202);
+            dateTimePicker.Name = "dateTimePicker";
+            dateTimePicker.Size = new Size(280, 27);
+            dateTimePicker.TabIndex = 60;
+            // 
+            // dateTimePickerTime
+            // 
+            dateTimePickerTime.Format = DateTimePickerFormat.Time;
+            dateTimePickerTime.Location = new Point(159, 235);
+            dateTimePickerTime.Name = "dateTimePickerTime";
+            dateTimePickerTime.Size = new Size(280, 27);
+            dateTimePickerTime.TabIndex = 61;
+            // 
+            // numericUpDownDistance
+            // 
+            numericUpDownDistance.Location = new Point(159, 139);
+            numericUpDownDistance.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            numericUpDownDistance.Name = "numericUpDownDistance";
+            numericUpDownDistance.Size = new Size(280, 27);
+            numericUpDownDistance.TabIndex = 62;
+            numericUpDownDistance.Value = new decimal(new int[] { 30, 0, 0, 0 });
+            // 
             // AddOrderForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(459, 312);
+            ClientSize = new Size(455, 314);
+            Controls.Add(numericUpDownDistance);
+            Controls.Add(dateTimePickerTime);
+            Controls.Add(dateTimePicker);
+            Controls.Add(numericUpDownPrice);
             Controls.Add(comboBoxDrivers);
             Controls.Add(comboBoxCars);
             Controls.Add(buttonAdd);
-            Controls.Add(textBoxDate);
-            Controls.Add(textBoxTime);
             Controls.Add(textBoxAdress);
             Controls.Add(textBoxRoute);
-            Controls.Add(textBoxDistance);
-            Controls.Add(textBoxPrice);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(surnameLabel);
@@ -203,18 +210,15 @@
             Controls.Add(groupLabel);
             Name = "AddOrderForm";
             Text = "AddOrderForm";
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPrice).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownDistance).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox textBoxDate;
-        private TextBox textBoxTime;
         private TextBox textBoxAdress;
         private TextBox textBoxRoute;
-        private TextBox textBoxDistance;
-        private TextBox textBoxPrice;
         private Label label3;
         private Label label2;
         private Label surnameLabel;
@@ -226,5 +230,9 @@
         private Button buttonAdd;
         private ComboBox comboBoxCars;
         private ComboBox comboBoxDrivers;
+        private NumericUpDown numericUpDownPrice;
+        private DateTimePicker dateTimePicker;
+        private DateTimePicker dateTimePickerTime;
+        private NumericUpDown numericUpDownDistance;
     }
 }

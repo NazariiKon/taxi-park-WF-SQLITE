@@ -49,6 +49,8 @@
             buttonCar = new Button();
             buttonDriver = new Button();
             buttonAddOrder = new Button();
+            buttonAddCar = new Button();
+            buttonAddDriver = new Button();
             SuspendLayout();
             // 
             // label1
@@ -229,13 +231,38 @@
             buttonAddOrder.TabIndex = 40;
             buttonAddOrder.Text = "Додати";
             buttonAddOrder.UseVisualStyleBackColor = true;
+            buttonAddOrder.Visible = false;
             buttonAddOrder.Click += buttonAddOrder_Click;
+            // 
+            // buttonAddCar
+            // 
+            buttonAddCar.Location = new Point(586, 15);
+            buttonAddCar.Name = "buttonAddCar";
+            buttonAddCar.Size = new Size(146, 26);
+            buttonAddCar.TabIndex = 41;
+            buttonAddCar.Text = "Додати авто";
+            buttonAddCar.UseVisualStyleBackColor = true;
+            buttonAddCar.Visible = false;
+            buttonAddCar.Click += buttonAddCar_Click;
+            // 
+            // buttonAddDriver
+            // 
+            buttonAddDriver.Location = new Point(434, 15);
+            buttonAddDriver.Name = "buttonAddDriver";
+            buttonAddDriver.Size = new Size(146, 26);
+            buttonAddDriver.TabIndex = 42;
+            buttonAddDriver.Text = "Додати водія";
+            buttonAddDriver.UseVisualStyleBackColor = true;
+            buttonAddDriver.Visible = false;
+            buttonAddDriver.Click += buttonAddDriver_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(744, 356);
+            Controls.Add(buttonAddDriver);
+            Controls.Add(buttonAddCar);
             Controls.Add(buttonAddOrder);
             Controls.Add(buttonDriver);
             Controls.Add(buttonCar);
@@ -258,7 +285,7 @@
             Controls.Add(listBoxOrders);
             Controls.Add(label1);
             Name = "Form2";
-            Text = "Form2";
+            Text = "Таксі-парк";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -286,5 +313,7 @@
         private Button buttonCar;
         private Button buttonDriver;
         private Button buttonAddOrder;
+        private Button buttonAddCar;
+        private Button buttonAddDriver;
     }
 }

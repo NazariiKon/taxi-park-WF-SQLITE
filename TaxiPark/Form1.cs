@@ -16,7 +16,7 @@ namespace TaxiPark
                 ("SELECT * FROM Driver WHERE Email = @param", textBoxEmail.Text);
             if (reader != null)
             {
-                Form2 newForm2 = new Form2();
+                Form2 newForm2 = new Form2(textBoxEmail.Text);
                 newForm2.Show();
                 reader.Close();
             }

@@ -21,9 +21,15 @@ namespace TaxiPark
         List<Driver> drivers = new List<Driver>();
         List<Taxi> taxi = new List<Taxi>();
 
-        public Form2()
+        public Form2(string email)
         {
             InitializeComponent();
+            if(email == "admin@gmail.com")
+            {
+                buttonAddOrder.Visible = true;
+                buttonAddCar.Visible = true;
+                buttonAddDriver.Visible = true;
+            }
             SQLiteDataReader reader = SQLiteReaderHelper.Request(@"SELECT * FROM 'Order'");
             if (reader != null)
             {
@@ -43,6 +49,7 @@ namespace TaxiPark
             }
             listBoxOrders.ValueMember = "CarAddress";
             listBoxOrders.Items.AddRange(orders.ToArray());
+            listBoxOrders.SelectedIndex = 0;
 
             reader = SQLiteReaderHelper.Request(@"SELECT * FROM 'Car'");
             if (reader != null)
@@ -159,6 +166,18 @@ namespace TaxiPark
         {
             AddOrderForm addOrderForm = new AddOrderForm(cars, drivers);
             addOrderForm.Show();
+        }
+
+        private void buttonAddCar_Click(object sender, EventArgs e)
+        {
+            AddCarForm addCarForm = new AddCarForm();
+            addCarForm.Show();
+        }
+
+        private void buttonAddDriver_Click(object sender, EventArgs e)
+        {
+            AddDriverForm addDriverForm = new AddDriverForm(cars);
+            addDriverForm.Show();
         }
     }
 }
