@@ -10,11 +10,10 @@ namespace TaxiPark
             InitializeComponent();
         }
 
-       
-
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            SQLiteDataReader reader = SQLiteReaderHelper.Request("SELECT * FROM Driver WHERE Email = @param", textBoxEmail.Text);
+            SQLiteDataReader reader = SQLiteReaderHelper.Request
+                ("SELECT * FROM Driver WHERE Email = @param", textBoxEmail.Text);
             if (reader != null)
             {
                 Form2 newForm2 = new Form2();

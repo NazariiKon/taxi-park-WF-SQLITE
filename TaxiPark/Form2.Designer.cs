@@ -39,15 +39,16 @@
             groupLabel = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBoxName = new TextBox();
-            textBoxCar = new TextBox();
-            textBoxDriver = new TextBox();
+            textBoxId = new TextBox();
             textBoxAdress = new TextBox();
             textBoxRoute = new TextBox();
             textBoxDistance = new TextBox();
             textBoxPrice = new TextBox();
             textBoxTime = new TextBox();
-            textBoxData = new TextBox();
+            textBoxDate = new TextBox();
+            buttonCar = new Button();
+            buttonDriver = new Button();
+            buttonAddOrder = new Button();
             SuspendLayout();
             // 
             // label1
@@ -68,6 +69,7 @@
             listBoxOrders.Name = "listBoxOrders";
             listBoxOrders.Size = new Size(288, 304);
             listBoxOrders.TabIndex = 1;
+            listBoxOrders.SelectedIndexChanged += listBoxOrders_SelectedIndexChanged;
             // 
             // nameLabel
             // 
@@ -75,7 +77,7 @@
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new Size(100, 23);
             nameLabel.TabIndex = 14;
-            nameLabel.Text = "Ім'я:";
+            nameLabel.Text = "ID:";
             // 
             // surnameLabel
             // 
@@ -141,29 +143,13 @@
             label3.TabIndex = 28;
             label3.Text = "Час:";
             // 
-            // textBoxName
+            // textBoxId
             // 
-            textBoxName.Location = new Point(452, 43);
-            textBoxName.Name = "textBoxName";
-            textBoxName.ReadOnly = true;
-            textBoxName.Size = new Size(280, 27);
-            textBoxName.TabIndex = 29;
-            // 
-            // textBoxCar
-            // 
-            textBoxCar.Location = new Point(452, 76);
-            textBoxCar.Name = "textBoxCar";
-            textBoxCar.ReadOnly = true;
-            textBoxCar.Size = new Size(280, 27);
-            textBoxCar.TabIndex = 30;
-            // 
-            // textBoxDriver
-            // 
-            textBoxDriver.Location = new Point(452, 109);
-            textBoxDriver.Name = "textBoxDriver";
-            textBoxDriver.ReadOnly = true;
-            textBoxDriver.Size = new Size(280, 27);
-            textBoxDriver.TabIndex = 31;
+            textBoxId.Location = new Point(452, 43);
+            textBoxId.Name = "textBoxId";
+            textBoxId.ReadOnly = true;
+            textBoxId.Size = new Size(280, 27);
+            textBoxId.TabIndex = 29;
             // 
             // textBoxAdress
             // 
@@ -205,24 +191,57 @@
             textBoxTime.Size = new Size(280, 27);
             textBoxTime.TabIndex = 37;
             // 
-            // textBoxData
+            // textBoxDate
             // 
-            textBoxData.Location = new Point(452, 274);
-            textBoxData.Name = "textBoxData";
-            textBoxData.ReadOnly = true;
-            textBoxData.Size = new Size(280, 27);
-            textBoxData.TabIndex = 38;
+            textBoxDate.Location = new Point(452, 274);
+            textBoxDate.Name = "textBoxDate";
+            textBoxDate.ReadOnly = true;
+            textBoxDate.Size = new Size(280, 27);
+            textBoxDate.TabIndex = 38;
+            // 
+            // buttonCar
+            // 
+            buttonCar.Location = new Point(452, 76);
+            buttonCar.Name = "buttonCar";
+            buttonCar.Size = new Size(280, 27);
+            buttonCar.TabIndex = 0;
+            buttonCar.Text = "Машина";
+            buttonCar.TextAlign = ContentAlignment.BottomLeft;
+            buttonCar.UseVisualStyleBackColor = true;
+            buttonCar.Click += buttonCar_Click;
+            // 
+            // buttonDriver
+            // 
+            buttonDriver.Location = new Point(452, 109);
+            buttonDriver.Name = "buttonDriver";
+            buttonDriver.Size = new Size(280, 27);
+            buttonDriver.TabIndex = 39;
+            buttonDriver.Text = "Водій";
+            buttonDriver.TextAlign = ContentAlignment.BottomLeft;
+            buttonDriver.UseVisualStyleBackColor = true;
+            buttonDriver.Click += buttonDriver_Click;
+            // 
+            // buttonAddOrder
+            // 
+            buttonAddOrder.Location = new Point(153, 12);
+            buttonAddOrder.Name = "buttonAddOrder";
+            buttonAddOrder.Size = new Size(146, 26);
+            buttonAddOrder.TabIndex = 40;
+            buttonAddOrder.Text = "Додати";
+            buttonAddOrder.UseVisualStyleBackColor = true;
+            buttonAddOrder.Click += buttonAddOrder_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(744, 356);
-            Controls.Add(textBoxData);
+            Controls.Add(buttonAddOrder);
+            Controls.Add(buttonDriver);
+            Controls.Add(buttonCar);
+            Controls.Add(textBoxDate);
             Controls.Add(textBoxTime);
-            Controls.Add(textBoxName);
-            Controls.Add(textBoxCar);
-            Controls.Add(textBoxDriver);
+            Controls.Add(textBoxId);
             Controls.Add(textBoxAdress);
             Controls.Add(textBoxRoute);
             Controls.Add(textBoxDistance);
@@ -257,14 +276,15 @@
         private Label groupLabel;
         private Label label2;
         private Label label3;
-        private TextBox textBoxName;
-        private TextBox textBoxCar;
-        private TextBox textBoxDriver;
+        private TextBox textBoxId;
         private TextBox textBoxAdress;
         private TextBox textBoxRoute;
         private TextBox textBoxDistance;
         private TextBox textBoxPrice;
         private TextBox textBoxTime;
-        private TextBox textBoxData;
+        private TextBox textBoxDate;
+        private Button buttonCar;
+        private Button buttonDriver;
+        private Button buttonAddOrder;
     }
 }

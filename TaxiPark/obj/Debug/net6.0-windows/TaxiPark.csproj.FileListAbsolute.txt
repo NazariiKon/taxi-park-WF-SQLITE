@@ -31,3 +31,6 @@ D:\Projects\TaxiPark\TaxiPark\obj\Debug\net6.0-windows\refint\TaxiPark.dll
 D:\Projects\TaxiPark\TaxiPark\obj\Debug\net6.0-windows\TaxiPark.pdb
 D:\Projects\TaxiPark\TaxiPark\obj\Debug\net6.0-windows\TaxiPark.genruntimeconfig.cache
 D:\Projects\TaxiPark\TaxiPark\obj\Debug\net6.0-windows\ref\TaxiPark.dll
+D:\Projects\TaxiPark\TaxiPark\obj\Debug\net6.0-windows\TaxiPark.CarForm.resources
+D:\Projects\TaxiPark\TaxiPark\obj\Debug\net6.0-windows\TaxiPark.DriverForm.resources
+D:\Projects\TaxiPark\TaxiPark\obj\Debug\net6.0-windows\TaxiPark.AddOrderForm.resources
