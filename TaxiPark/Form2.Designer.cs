@@ -51,6 +51,8 @@
             buttonAddOrder = new Button();
             buttonAddCar = new Button();
             buttonAddDriver = new Button();
+            buttonComplete = new Button();
+            buttonRating = new Button();
             SuspendLayout();
             // 
             // label1
@@ -225,9 +227,9 @@
             // 
             // buttonAddOrder
             // 
-            buttonAddOrder.Location = new Point(153, 12);
+            buttonAddOrder.Location = new Point(153, 15);
             buttonAddOrder.Name = "buttonAddOrder";
-            buttonAddOrder.Size = new Size(146, 26);
+            buttonAddOrder.Size = new Size(67, 26);
             buttonAddOrder.TabIndex = 40;
             buttonAddOrder.Text = "Додати";
             buttonAddOrder.UseVisualStyleBackColor = true;
@@ -236,9 +238,9 @@
             // 
             // buttonAddCar
             // 
-            buttonAddCar.Location = new Point(586, 15);
+            buttonAddCar.Location = new Point(629, 12);
             buttonAddCar.Name = "buttonAddCar";
-            buttonAddCar.Size = new Size(146, 26);
+            buttonAddCar.Size = new Size(103, 26);
             buttonAddCar.TabIndex = 41;
             buttonAddCar.Text = "Додати авто";
             buttonAddCar.UseVisualStyleBackColor = true;
@@ -247,20 +249,42 @@
             // 
             // buttonAddDriver
             // 
-            buttonAddDriver.Location = new Point(434, 15);
+            buttonAddDriver.Location = new Point(512, 12);
             buttonAddDriver.Name = "buttonAddDriver";
-            buttonAddDriver.Size = new Size(146, 26);
+            buttonAddDriver.Size = new Size(111, 26);
             buttonAddDriver.TabIndex = 42;
             buttonAddDriver.Text = "Додати водія";
             buttonAddDriver.UseVisualStyleBackColor = true;
             buttonAddDriver.Visible = false;
             buttonAddDriver.Click += buttonAddDriver_Click;
             // 
+            // buttonComplete
+            // 
+            buttonComplete.Location = new Point(305, 12);
+            buttonComplete.Name = "buttonComplete";
+            buttonComplete.Size = new Size(129, 26);
+            buttonComplete.TabIndex = 43;
+            buttonComplete.Text = "Виконано";
+            buttonComplete.UseVisualStyleBackColor = true;
+            buttonComplete.Click += buttonComplete_Click;
+            // 
+            // buttonRating
+            // 
+            buttonRating.Location = new Point(613, 109);
+            buttonRating.Name = "buttonRating";
+            buttonRating.Size = new Size(119, 27);
+            buttonRating.TabIndex = 44;
+            buttonRating.Text = "Рейтинг водіїв";
+            buttonRating.UseVisualStyleBackColor = true;
+            buttonRating.Click += buttonRating_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(744, 356);
+            Controls.Add(buttonRating);
+            Controls.Add(buttonComplete);
             Controls.Add(buttonAddDriver);
             Controls.Add(buttonAddCar);
             Controls.Add(buttonAddOrder);
@@ -315,5 +339,7 @@
         private Button buttonAddOrder;
         private Button buttonAddCar;
         private Button buttonAddDriver;
+        private Button buttonComplete;
+        private Button buttonRating;
     }
 }

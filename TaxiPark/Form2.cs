@@ -24,7 +24,7 @@ namespace TaxiPark
         public Form2(string email)
         {
             InitializeComponent();
-            if(email == "admin@gmail.com")
+            if (email == "admin@gmail.com")
             {
                 buttonAddOrder.Visible = true;
                 buttonAddCar.Visible = true;
@@ -105,6 +105,7 @@ namespace TaxiPark
         private void listBoxOrders_SelectedIndexChanged(object sender, EventArgs e)
         {
             Order order = listBoxOrders.SelectedItem as Order;
+            if (order == null) return;
             textBoxId.Text = order.Id.ToString();
             foreach (Car car in cars)
             {
@@ -178,6 +179,28 @@ namespace TaxiPark
         {
             AddDriverForm addDriverForm = new AddDriverForm(cars);
             addDriverForm.Show();
+        }
+
+        private void buttonComplete_Click(object sender, EventArgs e)
+        {
+            Order order = listBoxOrders.SelectedItem as Order;
+
+            foreach (Driver driver in drivers)
+            {
+                if (order.DriverId == driver.Id)
+                {
+                    driver.Count += 1;
+                    break;
+                }
+            }
+            listBoxOrders.Items.RemoveAt(listBoxOrders.SelectedIndex);
+            listBoxOrders.SelectedIndex = 0;
+        }
+
+        private void buttonRating_Click(object sender, EventArgs e)
+        {
+            RatingForm ratingForm = new RatingForm(drivers);
+            ratingForm.Show();
         }
     }
 }

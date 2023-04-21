@@ -36,3 +36,4 @@ D:\Projects\TaxiPark\TaxiPark\obj\Debug\net6.0-windows\TaxiPark.DriverForm.resou
 D:\Projects\TaxiPark\TaxiPark\obj\Debug\net6.0-windows\TaxiPark.AddOrderForm.resources
 D:\Projects\TaxiPark\TaxiPark\obj\Debug\net6.0-windows\TaxiPark.AddCarForm.resources
 D:\Projects\TaxiPark\TaxiPark\obj\Debug\net6.0-windows\TaxiPark.AddDriverForm.resources
+D:\Projects\TaxiPark\TaxiPark\obj\Debug\net6.0-windows\TaxiPark.RatingForm.resources

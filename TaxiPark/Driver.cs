@@ -12,6 +12,13 @@
         public string Number { get; set; }
         public string Email { get; set; }
         public Int64 CarId { get; set; }
+
+        public int Count { get; set; } = 0;
+
+        public override string? ToString()
+        {
+            return $"{Name} Кількість - {Count}"; 
+        }
     }
 
 }
